@@ -11,7 +11,7 @@ node {
     stage('Ready'){
         echo "Ready to build"
         echo "${env.BUILD_NUMBER}"
-        echo "${env.GIT_COMMIT}"
+        //echo "${env.GIT_COMMIT}"
     }
 
     //dockerfile기반 빌드하는 stage ,git소스 root에 dockerfile이 있어야한다

@@ -26,6 +26,10 @@ node {
     //    }
     //}
 
+    stage('Kubernetes deploy') {
+        sh "kubectl apply -f cdci.yaml -n cdcitest"
+    }
+
     stage('Complete') {
         sh "echo 'The end'"
     }

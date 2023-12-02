@@ -1,9 +1,12 @@
 FROM python:3.8.3-slim
+
+COPY . /DockerTutorial
+WORKDIR /DockerTutorial
+
 RUN apt update && \
     apt -y install git && \
-    git clone https://github.com/DCUSnSLab/DockerTutorial.git && \
-    pip install flask
+    pip install flask \
+
 EXPOSE 5000
-WORKDIR /DockerTutorial
 ENTRYPOINT ["python"]
 CMD ["app.py"]

@@ -28,7 +28,7 @@ node {
     }
 
     stage('Kubernetes deploy') {
-        //sh "kubectl delete -f cdci.yaml -n cdcitest"
+        sh "kubectl delete -f cdci.yaml -n cdcitest"
         sh "kubectl apply -f cdci.yaml -n cdcitest"
     }
 
